@@ -23,12 +23,12 @@ contract Album {
         tracks = 13; 
     } // Constructor
     // Returns the curren album information
-    function getAlbum() public view returns (string memory, string memory, uint) {
+    function getAlbum() external view returns (string memory, string memory, uint) {
         return (artist, albumTitle, tracks);
     } // getAlbum 
 
     // set the album information
-    function setAlbum(string memory _artist, string memory _albumTitle, uint _tracks) public {
+    function setAlbum(string memory _artist, string memory _albumTitle, uint _tracks) external {
         artist = _artist;
         albumTitle = _albumTitle;
         tracks = _tracks; 
